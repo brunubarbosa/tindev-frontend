@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from '../../assets/logo.svg';
 import api from '../../services/api';
 import './Login.css';
+import axios from 'axios'
 
 
 function Login({ history }) {
@@ -10,7 +11,8 @@ function Login({ history }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const { data } = await api.post('/devs', {
+    console.log(username)
+    const { data } = await axios.post('http://localhost:3333/devs', {
       username,
     });
     console.log(data)
