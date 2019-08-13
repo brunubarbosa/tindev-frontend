@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import io from 'socket.io-client'
-import logo from '../../assets/logo.svg';
-import like from '../../assets/like.svg';
+import logo from '../../assets/images/logo.svg';
+import like from '../../assets/images/like.svg';
 import './Main.css';
 import api from '../../services/api';
-import unlike from '../../assets/unlike.svg';
-import itsamatch from '../../assets/itsamatch.png';
+import unlike from '../../assets/images/unlike.svg';
+import itsamatch from '../../assets/images/itsamatch.png';
 
 export default function Main({ match }) {
   const [users, setUsers] = useState([]);
