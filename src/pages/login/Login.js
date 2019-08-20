@@ -10,12 +10,10 @@ function Login({ history }) {
   const [username, setUsername] = useState('');
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    console.log(username)
+    e.preventDefault();
     const { data } = await axios.post('http://localhost:3333/devs', {
       username,
     });
-    console.log(data)
     const { _id } = data;
     
     history.push(`/dev/${_id}`)
